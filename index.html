@@ -1,13 +1,288 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
-  </head>
-  <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.js"></script>
-  </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Azúcar y Sal - Artisanal Bakery | Handcrafted Delights</title>
+    <meta name="description" content="Discover our artisanal bakery's handcrafted cakes, desserts, and bites. Made with premium ingredients and decades of baking expertise. Order your sweet delights today!">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Source+Sans+Pro:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'bakery-pink': '#F8E8E8',
+                        'bakery-cream': '#F5F0E8',
+                        'bakery-brown': '#D4A574',
+                        'bakery-text': '#8B4513',
+                        'bakery-bg': '#FEFCFC',
+                        'bakery-shadow': 'rgba(0, 0, 0, 0.1)',
+                        'bakery-shadow-hover': 'rgba(0, 0, 0, 0.15)',
+                    },
+                    fontFamily: {
+                        'playfair': ['Playfair Display', 'serif'],
+                        'source-sans': ['Source Sans Pro', 'sans-serif'],
+                    },
+                    boxShadow: {
+                        'custom': '0 4px 6px rgba(0, 0, 0, 0.1)',
+                        'custom-hover': '0 8px 15px rgba(0, 0, 0, 0.15)',
+                        'header': '0 2px 4px rgba(0, 0, 0, 0.1)',
+                        'header-scrolled': '0 4px 6px rgba(0, 0, 0, 0.1)',
+                        'hero': '0 10px 30px rgba(0, 0, 0, 0.1)',
+                    },
+                },
+            },
+        };
+    </script>
+</head>
+<body class="font-source-sans bg-bakery-bg text-bakery-text leading-relaxed">
+    <!-- Header -->
+    <header class="header bg-white shadow-header sticky top-0 z-[1000]">
+        <nav class="nav max-w-6xl mx-auto px-4">
+            <div class="nav-container flex justify-between items-center h-16">
+                <div class="nav-brand">
+                    <h1 class="logo text-2xl font-bold text-bakery-text font-playfair">Azúcar y Sal</h1>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <div class="nav-menu hidden md:flex gap-8">
+                    <a href="#home" class="nav-link text-bakery-text no-underline font-medium hover:text-bakery-brown transition-colors duration-300 px-4 py-2">Home</a>
+                    <a href="#products" class="nav-link text-bakery-text no-underline font-medium hover:text-bakery-brown transition-colors duration-300 px-4 py-2">Products</a>
+                    <a href="#reviews" class="nav-link text-bakery-text no-underline font-medium hover:text-bakery-brown transition-colors duration-300 px-4 py-2">Reviews</a>
+                    <a href="#contact" class="nav-link text-bakery-text no-underline font-medium hover:text-bakery-brown transition-colors duration-300 px-4 py-2">Contact</a>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <button class="nav-toggle md:hidden flex flex-col bg-transparent border-none cursor-pointer p-2" id="navToggle">
+                    <span class="nav-toggle-bar w-6 h-[3px] bg-bakery-text my-[2px] transition-transform duration-300"></span>
+                    <span class="nav-toggle-bar w-6 h-[3px] bg-bakery-text my-[2px] transition-opacity duration-300"></span>
+                    <span class="nav-toggle-bar w-6 h-[3px] bg-bakery-text my-[2px] transition-transform duration-300"></span>
+                </button>
+            </div>
+            
+            <!-- Mobile Navigation -->
+            <div class="nav-mobile hidden bg-white border-t border-gray-200 py-4" id="navMobile">
+                <a href="#home" class="nav-mobile-link block text-bakery-text no-underline py-3 px-4 font-medium hover:text-bakery-brown transition-colors duration-300">Home</a>
+                <a href="#products" class="nav-mobile-link block text-bakery-text no-underline py-3 px-4 font-medium hover:text-bakery-brown transition-colors duration-300">Products</a>
+                <a href="#reviews" class="nav-mobile-link block text-bakery-text no-underline py-3 px-4 font-medium hover:text-bakery-brown transition-colors duration-300">Reviews</a>
+                <a href="#contact" class="nav-mobile-link block text-bakery-text no-underline py-3 px-4 font-medium hover:text-bakery-brown transition-colors duration-300">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero bg-gradient-to-br from-bakery-pink to-bakery-cream py-20 px-4">
+        <div class="hero-container max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+            <div class="hero-content text-center md:text-left">
+                <h2 class="hero-title text-4xl md:text-5xl font-bold text-bakery-text font-playfair mb-6 leading-tight">Sweeten your life with our handcrafted delights</h2>
+                <p class="hero-description text-lg text-bakery-text opacity-80 mb-8 leading-relaxed">Every bite tells a story of passion, tradition, and the finest ingredients. Discover our artisanal creations made with love.</p>
+                <button class="hero-button bg-bakery-brown text-white border-none px-8 py-4 rounded-full text-lg font-semibold cursor-pointer hover:bg-bakery-text hover:-translate-y-0.5 hover:shadow-custom-hover transition-all duration-300 shadow-custom" onclick="scrollToSection('contact')">Order Now</button>
+            </div>
+            <div class="hero-image relative">
+                <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600" 
+                     alt="Beautiful layered chocolate cake with fresh berries" 
+                     class="hero-img w-full h-auto rounded-xl shadow-hero hover:scale-105 transition-transform duration-300">
+                <div class="hero-badge absolute -bottom-6 -right-6 bg-white p-4 rounded-xl shadow-custom text-center">
+                    <div class="badge-stars text-bakery-brown text-lg font-bold">⭐⭐⭐⭐⭐</div>
+                    <div class="badge-text text-sm text-bakery-text opacity-70">500+ Happy Customers</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="products bg-white py-20 px-4">
+        <div class="products-container max-w-6xl mx-auto">
+            <div class="section-header text-center mb-16">
+                <h2 class="section-title text-3xl md:text-4xl font-bold text-bakery-text font-playfair mb-4">Our Delicious Products</h2>
+                <p class="section-description text-lg text-bakery-text opacity-70 max-w-xl mx-auto">Handcrafted with premium ingredients and decades of baking expertise</p>
+            </div>
+
+            <!-- Cakes -->
+            <div class="product-category mb-16">
+                <h3 class="category-title text-2xl md:text-3xl font-semibold text-bakery-text font-playfair text-center mb-8">Cakes</h3>
+                <div class="product-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="cakes-grid">
+                    <div class="loading text-center py-8 text-bakery-text opacity-60 italic">Loading delicious cakes...</div>
+                </div>
+            </div>
+
+            <!-- Desserts -->
+            <div class="product-category mb-16">
+                <h3 class="category-title text-2xl md:text-3xl font-semibold text-bakery-text font-playfair text-center mb-8">Desserts</h3>
+                <div class="product-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="desserts-grid">
+                    <div class="loading text-center py-8 text-bakery-text opacity-60 italic">Loading sweet desserts...</div>
+                </div>
+            </div>
+
+            <!-- Bites -->
+            <div class="product-category mb-16">
+                <h3 class="category-title text-2xl md:text-3xl font-semibold text-bakery-text font-playfair text-center mb-8">Bites</h3>
+                <div class="product-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="bites-grid">
+                    <div class="loading text-center py-8 text-bakery-text opacity-60 italic">Loading tasty bites...</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section id="reviews" class="reviews bg-bakery-pink py-20 px-4">
+        <div class="reviews-container max-w-6xl mx-auto">
+            <div class="section-header text-center mb-16">
+                <h2 class="section-title text-3xl md:text-4xl font-bold text-bakery-text font-playfair mb-4">What Our Customers Say</h2>
+                <p class="section-description text-lg text-bakery-text opacity-70 max-w-xl mx-auto">Real stories from our delighted customers</p>
+            </div>
+            <div class="reviews-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="reviews-grid">
+                <div class="loading text-center py-8 text-bakery-text opacity-60 italic">Loading customer reviews...</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact bg-white py-20 px-4">
+        <div class="contact-container max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-start">
+            <div class="contact-info">
+                <h2 class="contact-title text-3xl md:text-4xl font-bold text-bakery-text font-playfair mb-6">Get in Touch</h2>
+                <p class="contact-description text-lg text-bakery-text opacity-70 mb-8 leading-relaxed">Have a special occasion coming up? Let's create something magical together. Reach out to discuss custom orders or just say hello!</p>
+                
+                <div class="contact-details mb-8">
+                    <div class="contact-item flex items-center mb-4">
+                        <i class="fas fa-map-marker-alt contact-icon text-bakery-brown mr-4 w-6"></i>
+                        <span>123 Sweet Street, Bakery District, City 12345</span>
+                    </div>
+                    <div class="contact-item flex items-center mb-4">
+                        <i class="fas fa-phone contact-icon text-bakery-brown mr-4 w-6"></i>
+                        <span>(555) 123-CAKE</span>
+                    </div>
+                    <div class="contact-item flex items-center mb-4">
+                        <i class="fas fa-envelope contact-icon text-bakery-brown mr-4 w-6"></i>
+                        <span>hello@azucarysal.com</span>
+                    </div>
+                </div>
+
+                <div class="contact-image mt-8">
+                    <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=400" 
+                         alt="Cozy bakery interior with display cases" 
+                         class="contact-img w-full h-[250px] object-cover rounded-xl shadow-custom">
+                </div>
+            </div>
+
+            <div class="contact-form-container bg-bakery-cream p-8 rounded-xl shadow-custom">
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group mb-6">
+                        <label for="name" class="form-label block mb-2 text-bakery-text font-medium">Full Name</label>
+                        <input type="text" id="name" name="name" class="form-input w-full p-3 border-2 border-bakery-brown/20 rounded-lg bg-white text-bakery-text focus:outline-none focus:border-bakery-brown transition-colors duration-300" required>
+                        <div class="form-error text-red-600 text-sm mt-1 hidden" id="name-error"></div>
+                    </div>
+
+                    <div class="form-group mb-6">
+                        <label for="email" class="form-label block mb-2 text-bakery-text font-medium">Email Address</label>
+                        <input type="email" id="email" name="email" class="form-input w-full p-3 border-2 border-bakery-brown/20 rounded-lg bg-white text-bakery-text focus:outline-none focus:border-bakery-brown transition-colors duration-300" required>
+                        <div class="form-error text-red-600 text-sm mt-1 hidden" id="email-error"></div>
+                    </div>
+
+                    <div class="form-group mb-6">
+                        <label for="product" class="form-label block mb-2 text-bakery-text font-medium">Interested Product</label>
+                        <select id="product" name="product" class="form-select w-full p-3 border-2 border-bakery-brown/20 rounded-lg bg-white text-bakery-text focus:outline-none focus:border-bakery-brown transition-colors duration-300">
+                            <option value="">Select a category</option>
+                            <option value="cakes">Cakes</option>
+                            <option value="desserts">Desserts</option>
+                            <option value="bites">Bites</option>
+                            <option value="custom">Custom Order</option>
+                        </select>
+                        <div class="form-error text-red-600 text-sm mt-1 hidden" id="product-error"></div>
+                    </div>
+
+                    <div class="form-group mb-6">
+                        <label for="message" class="form-label block mb-2 text-bakery-text font-medium">Message</label>
+                        <textarea id="message" name="message" rows="5" class="form-textarea w-full p-3 border-2 border-bakery-brown/20 rounded-lg bg-white text-bakery-text focus:outline-none focus:border-bakery-brown transition-colors duration-300 resize-y min-h-[120px]" 
+                                  placeholder="Tell us about your special occasion or any specific requirements..." required></textarea>
+                        <div class="form-error text-red-600 text-sm mt-1 hidden" id="message-error"></div>
+                    </div>
+
+                    <button type="submit" class="form-submit w-full bg-bakery-brown text-white border-none py-3 px-6 rounded-lg text-base font-semibold cursor-pointer hover:bg-bakery-text hover:-translate-y-0.5 hover:shadow-custom-hover transition-all duration-300 shadow-custom disabled:opacity-60 disabled:cursor-not-allowed disabled:transform-none">
+                        <span class="submit-text">Send Message</span>
+                        <span class="submit-loading hidden">Sending...</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer bg-bakery-text text-white py-12 px-4">
+        <div class="footer-container max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
+            <div class="footer-section">
+                <h3 class="footer-title text-2xl font-bold font-playfair mb-4">Azúcar y Sal</h3>
+                <p class="footer-description text-white/80 mb-6 leading-relaxed">Crafting sweet memories with every bite since 2015. Our passion for baking brings joy to your special moments.</p>
+                <div class="social-links flex justify-center md:justify-start gap-4">
+                    <a href="#" class="social-link text-white/80 text-xl hover:text-bakery-brown transition-colors duration-300" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-link text-white/80 text-xl hover:text-bakery-brown transition-colors duration-300" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-link text-white/80 text-xl hover:text-bakery-brown transition-colors duration-300" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-link text-white/80 text-xl hover:text-bakery-brown transition-colors duration-300" aria-label="Pinterest"><i class="fab fa-pinterest"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h4 class="footer-subtitle text-lg font-semibold mb-4">Quick Links</h4>
+                <ul class="footer-links list-none">
+                    <li><a href="#home" class="footer-link text-white/80 no-underline hover:text-bakery-brown transition-colors duration-300">Home</a></li>
+                    <li><a href="#products" class="footer-link text-white/80 no-underline hover:text-bakery-brown transition-colors duration-300">Products</a></li>
+                    <li><a href="#reviews" class="footer-link text-white/80 no-underline hover:text-bakery-brown transition-colors duration-300">Reviews</a></li>
+                    <li><a href="#contact" class="footer-link text-white/80 no-underline hover:text-bakery-brown transition-colors duration-300">Contact</a></li>
+                    <li><a href="#" class="footer-link text-white/80 no-underline hover:text-bakery-brown transition-colors duration-300">Order Online</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4 class="footer-subtitle text-lg font-semibold mb-4">Contact Info</h4>
+                <div class="footer-contact flex flex-col gap-3">
+                    <div class="footer-contact-item flex items-center justify-center md:justify-start">
+                        <i class="fas fa-map-marker-alt footer-icon text-bakery-brown mr-3 w-5"></i>
+                        <span>123 Sweet Street, Bakery District</span>
+                    </div>
+                    <div class="footer-contact-item flex items-center justify-center md:justify-start">
+                        <i class="fas fa-phone footer-icon text-bakery-brown mr-3 w-5"></i>
+                        <span>(555) 123-CAKE</span>
+                    </div>
+                    <div class="footer-contact-item flex items-center justify-center md:justify-start">
+                        <i class="fas fa-envelope footer-icon text-bakery-brown mr-3 w-5"></i>
+                        <span>hello@azucarysal.com</span>
+                    </div>
+                    <div class="footer-contact-item flex items-center justify-center md:justify-start">
+                        <i class="fas fa-clock footer-icon text-bakery-brown mr-3 w-5"></i>
+                        <span>Mon-Sat: 7AM-8PM, Sun: 8AM-6PM</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom border-t border-white/20 mt-8 pt-8 text-center text-white/60">
+            <p>© 2024 Azúcar y Sal. All rights reserved. Made with ❤️ and flour.</p>
+        </div>
+    </footer>
+
+    <!-- Success Modal -->
+    <div class="modal fixed inset-0 bg-black/50 z-[2000] hidden items-center justify-center animate-[fadeIn_0.3s_ease]" id="successModal">
+        <div class="modal-content bg-white rounded-xl shadow-hero max-w-md w-[90%] max-h-[90vh] overflow-auto animate-[slideIn_0.3s_ease]">
+            <div class="modal-header flex justify-between items-center px-8 py-4 border-b border-gray-200">
+                <h3 class="text-bakery-text text-xl font-semibold font-playfair">Message Sent!</h3>
+                <button class="modal-close bg-transparent border-none text-bakery-text text-2xl cursor-pointer p-1" onclick="closeModal()">×</button>
+            </div>
+            <div class="modal-body px-8 py-6">
+                <p class="text-bakery-text leading-relaxed">Thank you for your message! We'll get back to you within 24 hours.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="./src/main.js"></script>
+</body>
 </html>
