@@ -1,13 +1,82 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
-  </head>
-  <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.js"></script>
-  </body>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pastelería Dulce Encanto</title>
+  <link href="/src/index.css" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+</head>
+<body class="bg-pink-50 text-gray-800">
+
+  <!-- Header -->
+  <header class="bg-pink-200 shadow-md">
+    <div class="max-w-6xl mx-auto px-4 py-6 flex justify-between items-center">
+      <h1 class="text-2xl font-bold text-pink-800">Dulce Encanto</h1>
+      <nav>
+        <ul class="flex gap-4 text-pink-700 font-medium">
+          <li><a href="#">Inicio</a></li>
+          <li><a href="#">Productos</a></li>
+          <li><a href="#">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="text-center py-20 bg-white">
+    <h2 class="text-4xl font-extrabold mb-4">Pasteles Artesanales y Deliciosos</h2>
+    <p class="text-lg text-gray-600 mb-8">Hechos con amor, ingredientes frescos y un toque especial.</p>
+    <a href="#" class="bg-pink-500 text-white py-3 px-6 rounded-md hover:bg-pink-600">Haz tu pedido</a>
+  </section>
+
+  <!-- Productos -->
+  <section class="max-w-6xl mx-auto px-4 py-16">
+    <h3 class="text-3xl font-bold text-center mb-12">Nuestros Favoritos</h3>
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="bg-white p-4 shadow rounded">
+        <img src="https://source.unsplash.com/400x300/?cake" alt="Pastel de Chocolate" class="w-full h-48 object-cover rounded mb-4">
+        <h4 class="text-xl font-semibold mb-2">Pastel de Chocolate</h4>
+        <p class="text-gray-600">Suave, húmedo y con un intenso sabor a chocolate.</p>
+      </div>
+      <div class="bg-white p-4 shadow rounded">
+        <img src="https://source.unsplash.com/400x300/?cupcake" alt="Cupcakes de Vainilla" class="w-full h-48 object-cover rounded mb-4">
+        <h4 class="text-xl font-semibold mb-2">Cupcakes de Vainilla</h4>
+        <p class="text-gray-600">Delicados y decorados a mano para cada ocasión.</p>
+      </div>
+      <div class="bg-white p-4 shadow rounded">
+        <img src="https://source.unsplash.com/400x300/?strawberry-cake" alt="Tarta de Fresas" class="w-full h-48 object-cover rounded mb-4">
+        <h4 class="text-xl font-semibold mb-2">Tarta de Fresas</h4>
+        <p class="text-gray-600">Fresca, ligera y con frutas de temporada.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tarjeta destacada -->
+  <section class="max-w-4xl mx-auto px-4 py-16">
+    <div class="bg-white dark:bg-gray-800 rounded-lg px-6 py-8 ring shadow-xl ring-gray-900/5">
+      <div>
+        <span class="inline-flex items-center justify-center rounded-md bg-pink-500 p-2 shadow-lg">
+          <!-- Ícono de ejemplo -->
+          <svg class="h-6 w-6 stroke-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 10h16M4 14h16M4 18h16" />
+          </svg>
+        </span>
+      </div>
+      <h3 class="text-gray-900 dark:text-white mt-5 text-base font-medium tracking-tight">Pasteles para cualquier ocasión</h3>
+      <p class="text-gray-500 dark:text-gray-400 mt-2 text-sm">
+        Realizamos diseños personalizados para cumpleaños, bodas y celebraciones especiales. ¡Incluso enviamos a domicilio!
+      </p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-pink-200 py-6 mt-12">
+    <div class="max-w-6xl mx-auto px-4 text-center text-pink-800">
+      © 2025 Dulce Encanto. Todos los derechos reservados.
+    </div>
+  </footer>
+
+</body>
 </html>
