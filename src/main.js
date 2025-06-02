@@ -98,7 +98,7 @@ const sampleReviews = [
         name: "Sarah Johnson",
         testimonial: "La torta Red Velvet fue absolutamente perfecta para el cumpleaños de mi hija. Todos los invitados hablaron maravillas de lo húmeda y sabrosa que estaba. ¡Sin duda volveré a pedir!",
         rating: 5,
-        imageUrl: "https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=100&h=100"
+        imageUrl: "https://img.freepik.com/foto-gratis/mujer-hermosa-joven-mirando-camara-chica-moda-verano-casual-camiseta-blanca-pantalones-cortos-hembra-positiva-muestra-emociones-faciales-modelo-divertido-aislado-amarillo_158538-15796.jpg"
     },
     {
         id: 2,
