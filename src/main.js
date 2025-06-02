@@ -127,7 +127,7 @@ function scrollToSection(sectionId) {
 function createProductCard(product) {
     return `
         <div class="product-card bg-bakery-cream rounded-xl overflow-hidden shadow-custom hover:shadow-custom-hover hover:-translate-y-1 transition-all duration-300">
-            <img src="${product.imageUrl}" alt="${product.name}" class="product-image w-full h-[200px] object-cover">
+            <img src="${product.imageUrl}" alt="${product.name}" class="product-image w-full h-[200px] object-cover cursor-pointer" onclick='showProductModal(${JSON.stringify(product)})'>
             <div class="product-info p-6">
                 <h4 class="product-name text-xl font-semibold text-bakery-text mb-2 font-playfair">${product.name}</h4>
                 <p class="product-description text-bakery-text opacity-70 mb-4 leading-relaxed">${product.description}</p>
@@ -237,7 +237,7 @@ function closeModal() {
 function resetForm() {
     const form = document.getElementById('contactForm');
     form.reset();
-    
+
     // Limpiar mensajes de error
     document.querySelectorAll('.form-error').forEach(error => {
         error.classList.add('hidden');
@@ -245,7 +245,7 @@ function resetForm() {
 }
 
 // Listeners de eventos
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     // Cargar contenido
     loadProducts();
     loadReviews();
@@ -253,14 +253,14 @@ document.addEventListener('DOMContentLoaded', function() {
     // Toggle navegación móvil
     const navToggle = document.getElementById('navToggle');
     const navMobile = document.getElementById('navMobile');
-    
-    navToggle.addEventListener('click', function() {
+
+    navToggle.addEventListener('click', function () {
         navMobile.classList.toggle('hidden');
-        
+
         // Animar menú hamburguesa
         const bars = navToggle.querySelectorAll('.nav-toggle-bar');
         navToggle.classList.toggle('active');
-        
+
         if (navToggle.classList.contains('active')) {
             bars[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
             bars[1].style.opacity = '0';
@@ -274,12 +274,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Scroll suave para enlaces de navegación
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
+        anchor.addEventListener('click', function (e) {
             e.preventDefault();
             const target = document.querySelector(this.getAttribute('href'));
             if (target) {
                 target.scrollIntoView({ behavior: 'smooth' });
-                
+
                 // Cerrar menú móvil si está abierto
                 navMobile.classList.add('hidden');
                 navToggle.classList.remove('active');
@@ -293,9 +293,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Envío del formulario de contacto
     const contactForm = document.getElementById('contactForm');
-    contactForm.addEventListener('submit', function(e) {
+    contactForm.addEventListener('submit', function (e) {
         e.preventDefault();
-        
+
         if (!validateForm()) {
             return;
         }
@@ -304,22 +304,22 @@ document.addEventListener('DOMContentLoaded', function() {
         const submitButton = contactForm.querySelector('.form-submit');
         const submitText = submitButton.querySelector('.submit-text');
         const submitLoading = submitButton.querySelector('.submit-loading');
-        
+
         // Mostrar estado de carga
         submitButton.disabled = true;
         submitText.classList.add('hidden');
         submitLoading.classList.remove('hidden');
-        
+
         // Simular retardo de llamada a API
         setTimeout(() => {
             // Restaurar estado del botón
             submitButton.disabled = false;
             submitText.classList.remove('hidden');
             submitLoading.classList.add('hidden');
-            
+
             // Mostrar modal de éxito
             showModal();
-            
+
             // Limpiar formulario
             resetForm();
         }, 2000);
@@ -327,14 +327,14 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Cerrar modal al hacer clic fuera
     const modal = document.getElementById('successModal');
-    modal.addEventListener('click', function(e) {
+    modal.addEventListener('click', function (e) {
         if (e.target === modal) {
             closeModal();
         }
     });
 
     // Efecto de scroll en el header
-    window.addEventListener('scroll', function() {
+    window.addEventListener('scroll', function () {
         const header = document.querySelector('.header');
         if (window.scrollY > 100) {
             header.classList.add('shadow-header-scrolled');
@@ -351,7 +351,7 @@ document.addEventListener('DOMContentLoaded', function() {
         rootMargin: '0px 0px -50px 0px'
     };
 
-    const observer = new IntersectionObserver(function(entries) {
+    const observer = new IntersectionObserver(function (entries) {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('opacity-100', 'translate-y-0');
@@ -368,15 +368,44 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 // Agregar algunas características interactivas
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     // Efectos hover en tarjetas de producto
     document.querySelectorAll('.product-card').forEach(card => {
-        card.addEventListener('mouseenter', function() {
+        card.addEventListener('mouseenter', function () {
             this.classList.add('-translate-y-2');
         });
-        
-        card.addEventListener('mouseleave', function() {
+
+        card.addEventListener('mouseleave', function () {
             this.classList.remove('-translate-y-2');
         });
     });
 });
+let currentProduct = null;
+
+function showProductModal(product) {
+    currentProduct = product;
+
+    document.getElementById('modalProductImage').src = product.imageUrl;
+    document.getElementById('modalProductName').textContent = product.name;
+    document.getElementById('modalProductDescription').textContent = product.description;
+    document.getElementById('modalProductPrice').textContent = product.price;
+
+    document.getElementById('productModal').classList.remove('hidden');
+}
+
+function closeProductModal() {
+    document.getElementById('productModal').classList.add('hidden');
+}
+
+function addToCartFromModal() {
+    if (currentProduct) {
+        addToCart(currentProduct.name);
+        closeProductModal();
+    }
+}
+
+fetch('src/componentes/ModalProducts.html')
+  .then(response => response.text())
+  .then(html => {
+    document.body.insertAdjacentHTML('beforeend', html);
+  });
