@@ -143,7 +143,7 @@ function createProductCard(product) {
 function createReviewCard(review) {
     const stars = "⭐".repeat(review.rating);
     return `
-        <div class="review-card bg-white p-8 rounded-xl shadow-custom hover:shadow-custom-hover transition-shadow duration-300">
+        <div class="review-card bg-white p-8 rounded-xl shadow-custom transition-transform duration-300 hover:shadow-custom-hover hover:scale-105">
             <div class="review-header flex items-center mb-6">
                 <img src="${review.imageUrl}" alt="Cliente feliz ${review.name}" class="review-avatar w-16 h-16 rounded-full object-cover mr-4">
                 <div class="review-info">
