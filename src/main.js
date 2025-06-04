@@ -390,11 +390,24 @@ function showProductModal(product) {
     document.getElementById('modalProductDescription').textContent = product.description;
     document.getElementById('modalProductPrice').textContent = product.price;
 
-    document.getElementById('productModal').classList.remove('hidden');
+    const modal = document.getElementById('productModal');
+    const modalCard = document.getElementById('modalCard');
+    modal.classList.remove('hidden');
+    // Forzar reflujo para que la transición funcione
+    void modalCard.offsetWidth;
+    modalCard.classList.add('opacity-100', 'scale-100');
+    modalCard.classList.remove('opacity-0', 'scale-95');
 }
 
 function closeProductModal() {
-    document.getElementById('productModal').classList.add('hidden');
+    const modal = document.getElementById('productModal');
+    const modalCard = document.getElementById('modalCard');
+    modalCard.classList.remove('opacity-100', 'scale-100');
+    modalCard.classList.add('opacity-0', 'scale-95');
+    // Esperar a que termine la transición antes de ocultar el fondo
+    setTimeout(() => {
+        modal.classList.add('hidden');
+    }, 300);
 }
 
 function addToCartFromModal() {
