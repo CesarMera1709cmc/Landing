@@ -174,17 +174,24 @@ function loadReviews() {
     const reviewsGrid = document.getElementById('reviews-grid');
     reviewsGrid.innerHTML = sampleReviews.map(createReviewCard).join('');
 }
-let arraycard = []
+let arraycard = [];
+
 function addToCart(productName) {
-    // En una implementación real, esto agregaría al carrito
+    // Buscar si el producto ya está en el carrito
+    const found = arraycard.find(item => item.name === productName);
+    if (found) {
+        found.cantidad += 1;
+    } else {
+        arraycard.push({ name: productName, cantidad: 1 });
+    }
     alert(`¡"${productName}" agregado al carrito! 🛒`);
-    arraycard.push(productName)
 }
+
 function showCartList() {
     if (arraycard.length === 0) {
         return "El carrito está vacío.";
     } else {
-        return `<ul>${arraycard.map(p => `<li>${p}</li>`).join("")}</ul>`;
+        return `<ul>${arraycard.map(p => `<li>${p.name} <span class="text-gray-500">x${p.cantidad}</span></li>`).join("")}</ul>`;
     }
 }
 // main.js
