@@ -174,11 +174,46 @@ function loadReviews() {
     const reviewsGrid = document.getElementById('reviews-grid');
     reviewsGrid.innerHTML = sampleReviews.map(createReviewCard).join('');
 }
-
+let arraycard = []
 function addToCart(productName) {
     // En una implementación real, esto agregaría al carrito
     alert(`¡"${productName}" agregado al carrito! 🛒`);
+    arraycard.push(productName)
 }
+function showCartList() {
+    if (arraycard.length === 0) {
+        return "El carrito está vacío.";
+    } else {
+        return `<ul>${arraycard.map(p => `<li>${p}</li>`).join("")}</ul>`;
+    }
+}
+// main.js
+document.addEventListener('DOMContentLoaded', () => {
+    fetch('src/componentes/ModalListaProductos.html')
+        .then(response => response.text())
+        .then(html => {
+            document.body.insertAdjacentHTML('beforeend', html);
+        });
+});
+
+function abrirModal() {
+    const modal = document.getElementById("modal-lista");
+    const lista = document.getElementById("lista-productos");
+
+    if (modal && lista) {
+        lista.innerHTML = showCartList();
+        modal.classList.remove('hidden');
+    }
+}
+
+function cerrarModal() {
+    const modal = document.getElementById("modal-lista");
+    if (modal) {
+        modal.classList.add('hidden');
+    }
+}
+
+
 
 function validateForm() {
     const form = document.getElementById('contactForm');
@@ -418,7 +453,7 @@ function addToCartFromModal() {
 }
 
 fetch('src/componentes/ModalProducts.html')
-  .then(response => response.text())
-  .then(html => {
-    document.body.insertAdjacentHTML('beforeend', html);
-  });
+    .then(response => response.text())
+    .then(html => {
+        document.body.insertAdjacentHTML('beforeend', html);
+    });
