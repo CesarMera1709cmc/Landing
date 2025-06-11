@@ -19,52 +19,52 @@ const sampleProducts = {
     desserts: [
         {
             id: 4,
-            name: "Macarons Franceses",
-            description: "Delicadas galletas de almendra con ganache sedoso en sabores surtidos",
-            price: "$24.00/docena",
+            name: "CupCake con crema",
+            description: "Deliciosos cupcakes con crema de mantequilla y decoraciones personalizadas",
+            price: "$1.50 c/u",
             imageUrl: "https://images.unsplash.com/photo-1558961363-fa8fdf82db35?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1w源自w=400&h=300"
         },
         {
             id: 5,
-            name: "Cheesecake de Frutos Rojos",
-            description: "Cremoso cheesecake estilo Nueva York con compota de frutos rojos",
-            price: "$8.50/rebanada",
+            name: "Cupcake con fondant",
+            description: "Cupcakes decorados con fondant, ideales para fiestas y eventos",
+            price: "desde $2.00 c/u",
             imageUrl: "https://images.unsplash.com/photo-1533134242443-d4fd215305ad?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=300"
         },
         {
             id: 6,
-            name: "Trufas de Chocolate",
-            description: "Trufas artesanales con cacao premium y sabores exóticos",
-            price: "$18.00/caja",
+            name: "Mini Chessecakes",
+            description: "Mora, fresa, maracuya, chocolate, nutella, manjar. ",
+            price: "desde $2.50 c/u",
             imageUrl: "https://images.unsplash.com/photo-1511381939415-e44015466834?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=300"
         },
         {
             id: 7,
-            name: "Croissants de Mantequilla",
-            description: "Crujientes y mantecosos, horneados a diario con técnica francesa",
-            price: "$3.50 c/u",
+            name: "Cakepops",
+            description: "De acuerdo a la temática se cotiza el precio",
+            price: "desde $2.50 c/u",
             imageUrl: "https://images.unsplash.com/photo-1509440159596-0249088772ff?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=300"
         },
         {
             id: 8,
-            name: "Muffins de Arándano",
-            description: "Muffins suaves llenos de arándanos silvestres y ralladura de limón",
-            price: "$4.25 c/u",
+            name: "ChocoOreo",
+            description: "Oreos cubiertas de chocolate con relleno de crema de vainilla",
+            price: "desde $2.50 c/u",
             imageUrl: "https://images.unsplash.com/photo-1607958996333-41aef7caefaa?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=300"
         },
         {
             id: 9,
-            name: "Galletas con Chispas de Chocolate",
-            description: "Galletas clásicas con chispas de chocolate belga y toque de sal marina",
-            price: "$2.75 c/u",
+            name: "Galletas",
+            description: "Galletas decoradas con fondant ideales para fiestas y eventos",
+            price: "desde $1.5 c/u",
             imageUrl: "https://images.unsplash.com/photo-1499636136210-6f4ee915583e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=300"
         },
         // Nuevos postres
         {
             id: 10,
-            name: "Brownie de Chocolate",
-            description: "Brownie húmedo con nueces y cobertura de chocolate derretido",
-            price: "$3.00 c/u",
+            name: "Shot de postre",
+            description: "Mouse de maracura, cheesecake de frutos rojos, tiramisu, dulce limeño, torta mojada de chocolate.",
+            price: "desde $2.00 c/u",
             imageUrl: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300"
         },
         
