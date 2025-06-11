@@ -1,3 +1,4 @@
+
 // Datos de ejemplo para la pastelería
 const sampleProducts = {
     cakes: [
@@ -6,14 +7,14 @@ const sampleProducts = {
             name: "Pastel Sencillo",
             description: "Torta decorada con crema o chantilly, decoración sencilla si tiene alguna tematica en especial se cotizara a parte.",
             price: "$18.00 lb",
-            imageUrl: "https://images.unsplash.com/photo-1586444248902-2f64eddc13df?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=300"
+            imageUrl: "https://blog.giallozafferano.it/lapasticceramatta/wp-content/uploads/2021/02/1-o-DSC_0606-scaled.jpg"
         },
         {
             id: 2,
             name: "Pastel con fondant",
             description: " Torta decorada con fondant, decoración sencilla si tiene alguna temática en especial se cotizara aparte.",
             price: "$25.00 lb",
-            imageUrl: "https://th.bing.com/th/id/OIP.fqGHrXr26oXwqk6jJPFAUAHaE8?w=246&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7"
+            imageUrl: "https://dam.cocinafacil.com.mx/wp-content/uploads/2021/08/como-hacer-fondant-casero.jpg"
         },
     ],
     desserts: [
@@ -22,42 +23,42 @@ const sampleProducts = {
             name: "CupCake con crema",
             description: "Deliciosos cupcakes con crema de mantequilla y decoraciones personalizadas",
             price: "$1.50 c/u",
-            imageUrl: "https://images.unsplash.com/photo-1558961363-fa8fdf82db35?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1w源自w=400&h=300"
+            imageUrl: "https://www.annarecetasfaciles.com/files/20190301_142607-1.jpg"
         },
         {
             id: 5,
             name: "Cupcake con fondant",
             description: "Cupcakes decorados con fondant, ideales para fiestas y eventos",
             price: "desde $2.00 c/u",
-            imageUrl: "https://images.unsplash.com/photo-1533134242443-d4fd215305ad?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=300"
+            imageUrl: "https://cdn.kiwilimon.com/recetaimagen/14489/12604.jpg"
         },
         {
             id: 6,
             name: "Mini Chessecakes",
             description: "Mora, fresa, maracuya, chocolate, nutella, manjar. ",
             price: "desde $2.50 c/u",
-            imageUrl: "https://images.unsplash.com/photo-1511381939415-e44015466834?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=300"
+            imageUrl: "https://www.loveandotherspices.com/wp-content/uploads/2023/04/mini-strawberry-cheesecake-featured-720x720.jpg"
         },
         {
             id: 7,
             name: "Cakepops",
             description: "De acuerdo a la temática se cotiza el precio",
             price: "desde $2.50 c/u",
-            imageUrl: "https://images.unsplash.com/photo-1509440159596-0249088772ff?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=300"
+            imageUrl: "https://th.bing.com/th/id/R.aecfba3cd0c2dfda7edc62ac0462ae97?rik=c4TAXjWGtYiZ4g&riu=http%3a%2f%2f4.bp.blogspot.com%2f-lMXXQDAV6yc%2fU1V8v9p5vVI%2fAAAAAAAABYI%2feXlbUQo4I1o%2fs1600%2fminnie%2bmouse%2bcake%2bpop%2b1.jpg&ehk=uKZU2FvQzAEY77F%2fcIQ51ABJhlX%2fnddtEnSwnjPJnmM%3d&risl=&pid=ImgRaw&r=0"
         },
         {
             id: 8,
             name: "ChocoOreo",
             description: "Oreos cubiertas de chocolate con relleno de crema de vainilla",
             price: "desde $2.50 c/u",
-            imageUrl: "https://images.unsplash.com/photo-1607958996333-41aef7caefaa?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=300"
+            imageUrl: "https://th.bing.com/th/id/R.c7873b7c885c7e078682e4edaa3799c7?rik=JIa%2b9Nt2zc6GBQ&pid=ImgRaw&r=0"
         },
         {
             id: 9,
             name: "Galletas",
             description: "Galletas decoradas con fondant ideales para fiestas y eventos",
             price: "desde $1.5 c/u",
-            imageUrl: "https://images.unsplash.com/photo-1499636136210-6f4ee915583e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=300"
+            imageUrl: "https://i.pinimg.com/736x/4a/b5/ed/4ab5ed96243c324436d9477a458da8b6--fondant-cookies.jpg"
         },
         // Nuevos postres
         {
@@ -65,115 +66,116 @@ const sampleProducts = {
             name: "Shot de postre",
             description: "Mouse de maracura, cheesecake de frutos rojos, tiramisu, dulce limeño, torta mojada de chocolate.",
             price: "desde $2.00 c/u",
-            imageUrl: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300"
+            imageUrl: "https://liznaturalbakery.com/wp-content/uploads/2022/10/shots-1.jpg"
         },
         
     ],
     bites: [
+       
         {
             id: 11,
-            name: "Huevo Mollo",
-            description: "Relleno de almendras o nueces",
-            price: "$20.00 ciento",
-            imageUrl: "https://images.unsplash.com/photo-1502741338009-cac2772e18bc?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300"
-        },
-        {
-            id: 12,
             name: "Alfajores",
             description: "Relleno de manjar o crema pastelera",
             price: "$18.00 ciento",
-            imageUrl: "https://images.unsplash.com/photo-1519864600265-abb23847ef2c?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300"
+            imageUrl: "https://th.bing.com/th/id/R.4d9bd919a440882da851eef8d323af98?rik=fRK4R4nt0cn7Cg&pid=ImgRaw&r=0"
         },
         {
-            id: 13,
+            id: 12,
             name: "Conitos",
             description: "Relleno de manjar o crema pastelera",
             price: "$20.00 ciento",
-            imageUrl: "https://images.unsplash.com/photo-1504674900247-ec6b0b1b798e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300"
+            imageUrl: "https://th.bing.com/th/id/R.64d88242ec1a885e0175101f1fec02b6?rik=PMoRVVCWDX8wBg&riu=http%3a%2f%2fespiaenlacocina.com%2fwp-content%2fuploads%2f2015%2f10%2fConos-de-hojaldre-rellenos-de-crema-pastelera-2.jpg&ehk=ezToLA5%2bK1i1BkEdfwIfNQXepQhMSOOfuWehb67Vr5M%3d&risl=&pid=ImgRaw&r=0"
         },
         {
-            id: 14,
+            id: 13,
             name: "Empanadas de piña",
             description: "Deliciosa masa de empanada rellena de piña",
             price: "$25 ciento",
-            imageUrl: "https://images.unsplash.com/photo-1464306076886-debca5e8a6b0?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300"
+            imageUrl: "https://i.pinimg.com/originals/ec/a9/55/eca95540f4e5a0a64db496c859dca493.jpg"
         },
         {
-            id: 15,
+            id: 14,
             name: "Frutitas de mazapan",
             description: "Mazapanes en forma de frutas coloridas y deliciosas",
             price: "$20.00 ciento",
-            imageUrl: "https://images.unsplash.com/photo-1519864600265-abb23847ef2c?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300"
+            imageUrl: "https://th.bing.com/th/id/OIP.Q2HnrpnOrnieacKnJPar9QHaFy?rs=1&pid=ImgDetMain"
         },
         {
-            id: 16,
+            id: 15,
             name: "Cocadas",
             description: "Dulces de coco rallado con leche condensada decoradas o de colores",
             price: "$25.00 ciento",
-            imageUrl: "https://images.unsplash.com/photo-1504674900247-ec6b0b1b798e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300"
+            imageUrl: "https://cdn2.cocinadelirante.com/sites/default/files/styles/gallerie/public/images/2019/03/receta-facil-y-rapida-de-cocadas.jpg"
         },
         {
-            id: 17,
+            id: 16,
             name: "Bigadeiros",
             description: "Chocolate, nutella, menta, maracuya, cafe, mora. ",
             price: "$45.00 ciento",
-            imageUrl: "https://images.unsplash.com/photo-1519864600265-abb23847ef2c?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300"
+            imageUrl: "https://th.bing.com/th/id/R.f23129fcabbeabf61c2ec591856be83e?rik=WGfjpoxE329NDw&pid=ImgRaw&r=0"
+        },
+         {
+            id: 17,
+            name: "Huevo Mollo",
+            description: "Relleno de almendras o nueces",
+            price: "$20.00 ciento",
+            imageUrl: "https://th.bing.com/th/id/OIP.-5GiNkL0vj17iAqhN7ZtQgHaJ4?rs=1&pid=ImgDetMain"
         },
         {
             id: 18,
             name: "Brigadeiros tematicos",
             description: "Brigadeiros decorados de acuerdo a tu evento",
             price: "$60.00 ciento",
-            imageUrl: "https://images.unsplash.com/photo-1502741338009-cac2772e18bc?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300"
+            imageUrl: "https://essareceitafunciona.com.br/wp-content/uploads/2022/10/Brigadeiros-morcego-de-Halloween-Essa-Receita-Funciona-7.jpg"
         },
         {
             id: 19,
             name: "Trufas de galleta y coco",
             description: "Trufas de galleta con coco rallado",
             price: "$20.00 ciento",
-            imageUrl: "https://images.unsplash.com/photo-1464306076886-debca5e8a6b0?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300"
+            imageUrl: "https://i.ytimg.com/vi/bIMOaCi32ho/maxresdefault.jpg"
         },
         {
             id: 20,
             name: "Trufas de chocolate",
             description: "Negro o blanco",
             price: "$45.00 ciento",
-            imageUrl: "https://images.unsplash.com/photo-1504674900247-ec6b0b1b798e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300"
+            imageUrl: "https://usa.calculadoras.com.mx/wp-content/uploads/2017/02/trufas-chocolate.jpg"
         },
         {
             id: 21,
             name: "Alfajores bañados de chocolate",
             description: "Decorados de acuerdo a la temática de tu fiesta",
             price: "$40.00 ciento",
-            imageUrl: "https://images.unsplash.com/photo-1519864600265-abb23847ef2c?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300"
+            imageUrl: "https://th.bing.com/th/id/OIP.LD5D8ABHghnSHkf9EuGRjQHaKR?pid=ImgDet&w=474&h=657&rs=1"
         },
         {
             id: 22,
             name: "Bolitas de nuez",
             description: "Deliciosa bolitas de nuez",
             price: "$30 ciento",
-            imageUrl: "https://images.unsplash.com/photo-1464306076886-debca5e8a6b0?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300"
+            imageUrl: "https://th.bing.com/th/id/R.0baa5ed8e803b0fd05da74ce246641ab?rik=yk3K9awzExJJ%2fQ&pid=ImgRaw&r=0"
         },
         {
             id: 23,
             name: "Profiteroles",
             description: "Relleno de manjar o crema pastelera",
             price: "$35.00 ciento",
-            imageUrl: "https://images.unsplash.com/photo-1502741338009-cac2772e18bc?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300"
+            imageUrl: "https://th.bing.com/th/id/R.8247a79e9bf738d8b25a9740b149e054?rik=wf8D0y2Tgzo21g&pid=ImgRaw&r=0"
         },
         {
             id: 24,
             name: "Bocaditos de menta bañados en chocolate",
             description: "Bocaditos de menta con chocolate",
             price: "$40.00 ciento",
-            imageUrl: "https://images.unsplash.com/photo-1502741338009-cac2772e18bc?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300"
+            imageUrl: "https://i.pinimg.com/736x/1d/38/a7/1d38a7566dec4b71a6a9394ecf1868fb.jpg"
         },
         {
             id: 25,
             name: "Tartaletas",
             description: "Relleno crema pastelera decorada con frutas",
             price: "$50.00 ciento",
-            imageUrl: "https://images.unsplash.com/photo-1502741338009-cac2772e18bc?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300"
+            imageUrl: "https://assets.unileversolutions.com/recipes-v2/38145.jpg"
         }
     ]
 };
@@ -181,24 +183,24 @@ const sampleProducts = {
 const sampleReviews = [
     {
         id: 1,
-        name: "Sarah Johnson",
-        testimonial: "La torta Red Velvet fue absolutamente perfecta para el cumpleaños de mi hija. Todos los invitados hablaron maravillas de lo húmeda y sabrosa que estaba. ¡Sin duda volveré a pedir!",
+        name: "María Fernanda Cedeño",
+        testimonial: "¡Los mini cheesecakes de maracuyá fueron el éxito de mi reunión! Su sabor fresco y la presentación impecable sorprendieron a todos mis invitados.",
         rating: 5,
-        imageUrl: "https://img.freepik.com/foto-gratis/mujer-hermosa-joven-mirando-camara-chica-moda-verano-casual-camiseta-blanca-pantalones-cortos-hembra-positiva-muestra-emociones-faciales-modelo-divertido-aislado-amarillo_158538-15796.jpg"
+        imageUrl: "https://randomuser.me/api/portraits/women/68.jpg"
     },
     {
         id: 2,
-        name: "Michael Chen",
-        testimonial: "¡Sus macarons franceses son increíbles! La textura perfecta y los sabores muy auténticos. Ahora soy cliente frecuente y siempre recomiendo Azúcar y Sal a mis amigos.",
+        name: "Jorge Luis Zambrano",
+        testimonial: "Probé los brigadeiros temáticos para el cumpleaños de mi hijo y quedaron espectaculares. Se nota la calidad y el cariño en cada detalle.",
         rating: 5,
-        imageUrl: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=100&h=100"
+        imageUrl: "https://randomuser.me/api/portraits/men/65.jpg"
     },
     {
         id: 3,
-        name: "Emma Rodriguez",
-        testimonial: "Vengo aquí desde hace más de un año y cada pastelito es una obra de arte. La atención al detalle y los ingredientes de calidad realmente se notan. ¡Mi lugar favorito en la ciudad!",
+        name: "Gabriela Torres",
+        testimonial: "Las tartaletas de frutas son una delicia, la crema pastelera es suave y la fruta siempre fresca. ¡Recomiendo Azúcar y Sal para cualquier ocasión!",
         rating: 5,
-        imageUrl: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=100&h=100"
+        imageUrl: "https://randomuser.me/api/portraits/women/66.jpg"
     }
 ];
 
@@ -272,13 +274,26 @@ function addToCart(productName) {
         arraycard.push({ name: productName, cantidad: 1 });
     }
     alert(`¡"${productName}" agregado al carrito! 🛒`);
+    const btn = document.getElementById('verCarritoBtn');
+    if (btn) {
+        btn.style.display = 'flex';
+    }
 }
 
 function showCartList() {
     if (arraycard.length === 0) {
         return "El carrito está vacío.";
     } else {
-        return `<ul>${arraycard.map(p => `<li>${p.name} <span class="text-gray-500">x${p.cantidad}</span></li>`).join("")}</ul>`;
+        return `<ul>
+            ${arraycard.map((p, idx) => `
+                <li class="flex justify-between items-center mb-2">
+                    <span>${p.name} <span class="text-gray-500">x${p.cantidad}</span></span>
+                    <button class="text-red-500 font-bold ml-4 remove-cart-item" data-index="${idx}" title="Eliminar">
+                        ×
+                    </button>
+                </li>
+            `).join("")}
+        </ul>`;
     }
 }
 // main.js
@@ -297,17 +312,21 @@ function abrirModal() {
     if (modal && lista) {
         lista.innerHTML = showCartList();
         modal.classList.remove('hidden');
+        setTimeout(() => {
+            modal.classList.add('show');
+        }, 10);
     }
 }
 
 function cerrarModal() {
     const modal = document.getElementById("modal-lista");
     if (modal) {
-        modal.classList.add('hidden');
+        modal.classList.remove('show');
+        setTimeout(() => {
+            modal.classList.add('hidden');
+        }, 150); // Debe coincidir con la duración de la transición
     }
 }
-
-
 
 function validateForm() {
     const form = document.getElementById('contactForm');
@@ -513,6 +532,14 @@ document.addEventListener('DOMContentLoaded', function () {
     addHorizontalScroll('cakes-scroll', 'scrollLeftCakes', 'scrollRightCakes');
     addHorizontalScroll('desserts-scroll', 'scrollLeftDesserts', 'scrollRightDesserts');
     addHorizontalScroll('bites-scroll', 'scrollLeftBites', 'scrollRightBites');
+
+    const btn = document.getElementById('verCarritoBtn');
+    if (btn) {
+        btn.addEventListener('click', function () {
+            abrirModal();
+        });
+    }
+    
 });
 
 function addHorizontalScroll(scrollId, leftBtnId, rightBtnId) {
@@ -617,6 +644,11 @@ function addToCartFromModal() {
         addToCart(currentProduct.name);
         closeProductModal();
     }
+    const btn = document.getElementById('verCarritoBtn');
+    if (btn) {
+        btn.style.display = 'flex';
+    }
+    
 }
 
 fetch('src/componentes/ModalProducts.html')
@@ -662,3 +694,65 @@ function closeModal() {
         modal.classList.remove('flex');
     }, 300); // Debe coincidir con la duración de la transición
 }
+
+// Delegación para el botón "Enviar" del modal de la lista
+document.body.addEventListener('click', function (e) {
+    if (e.target && e.target.id === 'enviarLista') {
+        // Cierra el modal de la lista
+        const modalLista = document.getElementById('modal-lista');
+        if (modalLista) {
+            modalLista.classList.add('hidden');
+            modalLista.classList.remove('flex');
+        }
+
+        // Espera un poco para que el modal se cierre antes de hacer scroll
+        setTimeout(() => {
+            // Haz scroll al formulario
+            const form = document.getElementById('contactForm');
+            if (form) {
+                form.scrollIntoView({ behavior: 'smooth' });
+            }
+
+            // Agrega la lista seleccionada al mensaje
+            const mensaje = document.getElementById('message');
+            const lista = document.getElementById('lista-productos');
+            if (mensaje && lista) {
+                // Toma el texto de los productos seleccionados
+                const productos = Array.from(lista.querySelectorAll('li')).map(li => {
+                    const span = li.querySelector('span');
+                    return span ? span.textContent : '';
+                }).join('\n');
+                // Mensaje personalizado
+                let textoBase = `Buenas tardes, quiero realizar este pedido:\n${productos}`;
+                if (mensaje.value.trim()) {
+                    mensaje.value = `${textoBase}\n\n${mensaje.value.trim()}`;
+                } else {
+                    mensaje.value = textoBase;
+                }
+                mensaje.focus();
+
+                // Limpiar el carrito después de enviar
+                arraycard = [];
+                const listaProductos = document.getElementById('lista-productos');
+                if (listaProductos) {
+                    listaProductos.innerHTML = showCartList();
+                }
+                const btn = document.getElementById('verCarritoBtn');
+                if (btn) {
+                    btn.style.display = 'none'; // Oculta el botón de ver carrito
+                }   
+            }
+        }, 150); // Transición rápida
+    }
+    if (e.target.classList.contains('remove-cart-item')) {
+        const idx = parseInt(e.target.getAttribute('data-index'));
+        if (!isNaN(idx)) {
+            arraycard.splice(idx, 1);
+            // Actualiza la lista en el modal
+            const lista = document.getElementById('lista-productos');
+            if (lista) {
+                lista.innerHTML = showCartList();
+            }
+        }
+    }
+});
