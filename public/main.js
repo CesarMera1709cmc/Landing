@@ -298,7 +298,7 @@ function showCartList() {
 }
 // main.js
 document.addEventListener('DOMContentLoaded', () => {
-    fetch('src/componentes/ModalListaProductos.html')
+    fetch('/ModalListaProductos.html')
         .then(response => response.text())
         .then(html => {
             document.body.insertAdjacentHTML('beforeend', html);
@@ -651,7 +651,7 @@ function addToCartFromModal() {
     
 }
 
-fetch('src/componentes/ModalProducts.html')
+fetch('/ModalProducts.html')
     .then(response => response.text())
     .then(html => {
         document.body.insertAdjacentHTML('beforeend', html);
