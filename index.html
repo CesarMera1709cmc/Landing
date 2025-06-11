@@ -73,7 +73,7 @@
                         class="nav-link text-bakery-text no-underline font-medium hover:text-bakery-brown transition-colors duration-300 px-4 py-2">Contacto</a>
                     <a href="javascript:void(0)" onclick="abrirModal()"
                         class="nav-link text-bakery-text no-underline font-medium hover:text-bakery-brown transition-colors duration-300 px-4 py-2">
-                        Lista
+                        Pedido
                     </a>
                 </div>
 
@@ -86,15 +86,16 @@
                         class="nav-toggle-bar w-6 h-[3px] bg-bakery-text my-[2px] transition-opacity duration-300"></span>
                     <span
                         class="nav-toggle-bar w-6 h-[3px] bg-bakery-text my-[2px] transition-transform duration-300"></span>
-                    <span href="javascript:void(0)" onclick="abrirModal()"
-                        class="nav-toggle-bar w-6 h-[3px] bg-bakery-text my-[2px] transition-opacity duration-300">
-                        Lista
-                    </span>
                 </button>
             </div>
 
             <!-- Navegación móvil -->
             <div class="nav-mobile hidden bg-white border-t border-gray-200 py-4" id="navMobile">
+                <!-- Acceso a la lista al inicio -->
+                <button onclick="abrirModal()" class="flex items-center gap-2 px-4 py-3 text-bakery-brown font-semibold hover:bg-bakery-cream w-full mb-2">
+                    <i class="fas fa-list"></i>
+                    Pedido
+                </button>
                 <a href="#home"
                     class="nav-mobile-link block text-bakery-text no-underline py-3 px-4 font-medium hover:text-bakery-brown transition-colors duration-300">Inicio</a>
                 <a href="#products"
@@ -106,7 +107,6 @@
             </div>
         </nav>
     </header>
-
     <!-- Sección Hero -->
     <section id="home" class="hero bg-bakery-cream py-20 px-4">
         <div class="hero-container max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
@@ -279,20 +279,6 @@
                     </div>
 
                     <div class="form-group mb-6">
-                        <label for="product" class="form-label block mb-2 text-bakery-text font-medium">Producto de
-                            interés</label>
-                        <select id="product" name="product"
-                            class="form-select w-full p-3 border-2 border-bakery-brown/20 rounded-lg bg-white text-bakery-text focus:outline-none focus:border-bakery-brown transition-colors duration-300">
-                            <option value="">Selecciona una categoría</option>
-                            <option value="cakes">Pasteles</option>
-                            <option value="desserts">Postres</option>
-                            <option value="bites">Bocados</option>
-                            <option value="custom">Pedido personalizado</option>
-                        </select>
-                        <div class="form-error text-red-600 text-sm mt-1 hidden" id="product-error"></div>
-                    </div>
-
-                    <div class="form-group mb-6">
                         <label for="message" class="form-label block mb-2 text-bakery-text font-medium">Mensaje</label>
                         <textarea id="message" name="message" rows="5"
                             class="form-textarea w-full p-3 border-2 border-bakery-brown/20 rounded-lg bg-white text-bakery-text focus:outline-none focus:border-bakery-brown transition-colors duration-300 resize-y min-h-[120px]"
@@ -397,7 +383,9 @@
 
     <!-- JavaScript -->
     <script src="/main.js"></script>
-    
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
+    <script src="js/firebase.js"></script>
 </body>
 
 </html>
@@ -451,4 +439,37 @@
 #reviews-grid::-webkit-scrollbar {
     display: none; /* Chrome/Safari/Webkit */
 }
+
+#modal-lista {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.15s;
+}
+
+#modal-lista.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+#modal-lista .modal-lista-content {
+    transition: opacity 0.15s, transform 0.15s;
+}
+
+#modal-lista.show .modal-lista-content {
+    opacity: 1;
+    transform: scale(1);
+}
+
+#modal-lista .modal-lista-content {
+    opacity: 0;
+    transform: scale(0.95);
+}
 </style>
+
+<button id="verCarritoBtn"
+    class="fixed bottom-6 right-6 z-[3000] bg-bakery-brown text-white px-6 py-3 rounded-full shadow-custom font-semibold flex items-center gap-2 hover:bg-bakery-text transition-all duration-300"
+    style="display: none;">
+    <i class="fas fa-list"></i>
+    Ver pedido
+</button>
