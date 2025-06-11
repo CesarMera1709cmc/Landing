@@ -3,25 +3,18 @@ const sampleProducts = {
     cakes: [
         {
             id: 1,
-            name: "Torta Red Velvet",
-            description: "Capas clásicas de red velvet con suave betún de queso crema y un toque de vainilla",
-            price: "$45.00",
+            name: "Pastel Sencillo",
+            description: "Torta decorada con crema o chantilly, decoración sencilla si tiene alguna tematica en especial se cotizara a parte.",
+            price: "$18.00 lb",
             imageUrl: "https://images.unsplash.com/photo-1586444248902-2f64eddc13df?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=300"
         },
         {
             id: 2,
-            name: "Elegancia de Chocolate",
-            description: "Bizcocho de chocolate intenso con ganache oscuro y delicados detalles de hoja de oro",
-            price: "$52.00",
+            name: "Pastel con fondant",
+            description: " Torta decorada con fondant, decoración sencilla si tiene alguna temática en especial se cotizara aparte.",
+            price: "$25.00 lb",
             imageUrl: "https://th.bing.com/th/id/OIP.fqGHrXr26oXwqk6jJPFAUAHaE8?w=246&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7"
         },
-        {
-            id: 3,
-            name: "Frescura de Fresa",
-            description: "Bizcocho de vainilla ligero con fresas frescas y crema batida",
-            price: "$38.00",
-            imageUrl: "https://images.unsplash.com/photo-1565958011703-44f9829ba187?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=300"
-        }
     ],
     desserts: [
         {
@@ -65,29 +58,122 @@ const sampleProducts = {
             description: "Galletas clásicas con chispas de chocolate belga y toque de sal marina",
             price: "$2.75 c/u",
             imageUrl: "https://images.unsplash.com/photo-1499636136210-6f4ee915583e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=300"
-        }
+        },
+        // Nuevos postres
+        {
+            id: 10,
+            name: "Brownie de Chocolate",
+            description: "Brownie húmedo con nueces y cobertura de chocolate derretido",
+            price: "$3.00 c/u",
+            imageUrl: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300"
+        },
+        
     ],
     bites: [
         {
-            id: 7,
-            name: "Croissants de Mantequilla",
-            description: "Crujientes y mantecosos, horneados a diario con técnica francesa",
-            price: "$3.50 c/u",
-            imageUrl: "https://images.unsplash.com/photo-1509440159596-0249088772ff?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=300"
+            id: 11,
+            name: "Huevo Mollo",
+            description: "Relleno de almendras o nueces",
+            price: "$20.00 ciento",
+            imageUrl: "https://images.unsplash.com/photo-1502741338009-cac2772e18bc?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300"
         },
         {
-            id: 8,
-            name: "Muffins de Arándano",
-            description: "Muffins suaves llenos de arándanos silvestres y ralladura de limón",
-            price: "$4.25 c/u",
-            imageUrl: "https://images.unsplash.com/photo-1607958996333-41aef7caefaa?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=300"
+            id: 12,
+            name: "Alfajores",
+            description: "Relleno de manjar o crema pastelera",
+            price: "$18.00 ciento",
+            imageUrl: "https://images.unsplash.com/photo-1519864600265-abb23847ef2c?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300"
         },
         {
-            id: 9,
-            name: "Galletas con Chispas de Chocolate",
-            description: "Galletas clásicas con chispas de chocolate belga y toque de sal marina",
-            price: "$2.75 c/u",
-            imageUrl: "https://images.unsplash.com/photo-1499636136210-6f4ee915583e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=300"
+            id: 13,
+            name: "Conitos",
+            description: "Relleno de manjar o crema pastelera",
+            price: "$20.00 ciento",
+            imageUrl: "https://images.unsplash.com/photo-1504674900247-ec6b0b1b798e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300"
+        },
+        {
+            id: 14,
+            name: "Empanadas de piña",
+            description: "Deliciosa masa de empanada rellena de piña",
+            price: "$25 ciento",
+            imageUrl: "https://images.unsplash.com/photo-1464306076886-debca5e8a6b0?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300"
+        },
+        {
+            id: 15,
+            name: "Frutitas de mazapan",
+            description: "Mazapanes en forma de frutas coloridas y deliciosas",
+            price: "$20.00 ciento",
+            imageUrl: "https://images.unsplash.com/photo-1519864600265-abb23847ef2c?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300"
+        },
+        {
+            id: 16,
+            name: "Cocadas",
+            description: "Dulces de coco rallado con leche condensada decoradas o de colores",
+            price: "$25.00 ciento",
+            imageUrl: "https://images.unsplash.com/photo-1504674900247-ec6b0b1b798e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300"
+        },
+        {
+            id: 17,
+            name: "Bigadeiros",
+            description: "Chocolate, nutella, menta, maracuya, cafe, mora. ",
+            price: "$45.00 ciento",
+            imageUrl: "https://images.unsplash.com/photo-1519864600265-abb23847ef2c?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300"
+        },
+        {
+            id: 18,
+            name: "Brigadeiros tematicos",
+            description: "Brigadeiros decorados de acuerdo a tu evento",
+            price: "$60.00 ciento",
+            imageUrl: "https://images.unsplash.com/photo-1502741338009-cac2772e18bc?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300"
+        },
+        {
+            id: 19,
+            name: "Trufas de galleta y coco",
+            description: "Trufas de galleta con coco rallado",
+            price: "$20.00 ciento",
+            imageUrl: "https://images.unsplash.com/photo-1464306076886-debca5e8a6b0?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300"
+        },
+        {
+            id: 20,
+            name: "Trufas de chocolate",
+            description: "Negro o blanco",
+            price: "$45.00 ciento",
+            imageUrl: "https://images.unsplash.com/photo-1504674900247-ec6b0b1b798e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300"
+        },
+        {
+            id: 21,
+            name: "Alfajores bañados de chocolate",
+            description: "Decorados de acuerdo a la temática de tu fiesta",
+            price: "$40.00 ciento",
+            imageUrl: "https://images.unsplash.com/photo-1519864600265-abb23847ef2c?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300"
+        },
+        {
+            id: 22,
+            name: "Bolitas de nuez",
+            description: "Deliciosa bolitas de nuez",
+            price: "$30 ciento",
+            imageUrl: "https://images.unsplash.com/photo-1464306076886-debca5e8a6b0?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300"
+        },
+        {
+            id: 23,
+            name: "Profiteroles",
+            description: "Relleno de manjar o crema pastelera",
+            price: "$35.00 ciento",
+            imageUrl: "https://images.unsplash.com/photo-1502741338009-cac2772e18bc?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300"
+        },
+        {
+            id: 24,
+            name: "Bocaditos de menta bañados en chocolate",
+            description: "Bocaditos de menta con chocolate",
+            price: "$40.00 ciento",
+            imageUrl: "https://images.unsplash.com/photo-1502741338009-cac2772e18bc?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300"
+        },
+        {
+            id: 25,
+            name: "Tartaletas",
+            description: "Relleno crema pastelera decorada con frutas",
+            price: "$50.00 ciento",
+            imageUrl: "https://images.unsplash.com/photo-1502741338009-cac2772e18bc?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300"
         }
     ]
 };
@@ -126,14 +212,15 @@ function scrollToSection(sectionId) {
 
 function createProductCard(product) {
     return `
-        <div class="product-card bg-bakery-cream rounded-xl overflow-hidden shadow-custom hover:shadow-custom-hover hover:-translate-y-1 transition-all duration-300">
-            <img src="${product.imageUrl}" alt="${product.name}" class="product-image w-full h-[200px] object-cover cursor-pointer" onclick='showProductModal(${JSON.stringify(product)})'>
-            <div class="product-info p-6">
+        <div class="product-card bg-bakery-cream rounded-xl overflow-hidden shadow-custom hover:shadow-custom-hover hover:-translate-y-1 transition-all duration-300 w-80 min-w-[20rem] flex-shrink-0 cursor-pointer flex flex-col"
+            onclick="abrirModalProducto(${product.id}, '${product.name.replace(/'/g, "\\'")}', '${product.description.replace(/'/g, "\\'")}', '${product.price}', '${product.imageUrl}')">
+            <img src="${product.imageUrl}" alt="${product.name}" class="product-image w-full h-[200px] object-cover">
+            <div class="product-info p-6 flex flex-col flex-1">
                 <h4 class="product-name text-xl font-semibold text-bakery-text mb-2 font-playfair">${product.name}</h4>
                 <p class="product-description text-bakery-text opacity-70 mb-4 leading-relaxed">${product.description}</p>
-                <div class="product-footer flex justify-between items-center">
+                <div class="product-footer flex justify-between items-center mt-auto pt-4">
                     <span class="product-price text-lg font-semibold text-bakery-brown">${product.price}</span>
-                    <button class="product-button bg-bakery-brown text-white border-none px-4 py-2 rounded-lg font-medium hover:bg-bakery-text transition-colors duration-300" onclick="addToCart('${product.name}')">Agregar al carrito</button>
+                    <button class="product-button bg-bakery-brown text-white border-none px-4 py-2 rounded-lg font-medium hover:bg-bakery-text transition-colors duration-300" onclick="event.stopPropagation();addToCart('${product.name}')">Agregar al carrito</button>
                 </div>
             </div>
         </div>
@@ -143,7 +230,7 @@ function createProductCard(product) {
 function createReviewCard(review) {
     const stars = "⭐".repeat(review.rating);
     return `
-        <div class="review-card bg-white p-8 rounded-xl shadow-custom transition-transform duration-300 hover:shadow-custom-hover hover:scale-105">
+        <div class="review-card bg-white p-8 rounded-xl shadow-custom transition-transform duration-300 hover:shadow-custom-hover hover:scale-105 min-w-[20rem] w-80 flex-shrink-0">
             <div class="review-header flex items-center mb-6">
                 <img src="${review.imageUrl}" alt="Cliente feliz ${review.name}" class="review-avatar w-16 h-16 rounded-full object-cover mr-4">
                 <div class="review-info">
@@ -157,16 +244,16 @@ function createReviewCard(review) {
 }
 
 function loadProducts() {
-    // Cargar tortas
-    const cakesGrid = document.getElementById('cakes-grid');
+    // Pasteles
+    const cakesGrid = document.getElementById('cakes-scroll');
     cakesGrid.innerHTML = sampleProducts.cakes.map(createProductCard).join('');
 
-    // Cargar postres
-    const dessertsGrid = document.getElementById('desserts-grid');
+    // Postres (debe mostrar sampleProducts.desserts)
+    const dessertsGrid = document.getElementById('desserts-scroll');
     dessertsGrid.innerHTML = sampleProducts.desserts.map(createProductCard).join('');
 
-    // Cargar bocados
-    const bitesGrid = document.getElementById('bites-grid');
+    // Bocados de sal (debe mostrar sampleProducts.bites)
+    const bitesGrid = document.getElementById('bites-scroll');
     bitesGrid.innerHTML = sampleProducts.bites.map(createProductCard).join('');
 }
 
@@ -407,7 +494,80 @@ document.addEventListener('DOMContentLoaded', function () {
         card.classList.add('opacity-0', 'translate-y-5', 'transition-all', 'duration-600');
         observer.observe(card);
     });
+
+    // Scroll horizontal para Pasteles SOLO en móvil
+    function isMobile() {
+        return window.innerWidth < 768;
+    }
+    function handleCakesScroll() {
+        const cakesScroll = document.getElementById('cakes-scroll');
+        if (cakesScroll) {
+            cakesScroll.className = "product-grid flex flex-nowrap overflow-x-auto gap-8 scroll-smooth py-4 px-2 md:justify-center";
+            cakesScroll.style.overflowX = 'auto';
+        }
+    }
+    handleCakesScroll();
+    window.addEventListener('resize', handleCakesScroll);
+
+    // Llama a addHorizontalScroll SOLO UNA VEZ por sección
+    addHorizontalScroll('cakes-scroll', 'scrollLeftCakes', 'scrollRightCakes');
+    addHorizontalScroll('desserts-scroll', 'scrollLeftDesserts', 'scrollRightDesserts');
+    addHorizontalScroll('bites-scroll', 'scrollLeftBites', 'scrollRightBites');
 });
+
+function addHorizontalScroll(scrollId, leftBtnId, rightBtnId) {
+    const scrollDiv = document.getElementById(scrollId);
+    const btnLeft = document.getElementById(leftBtnId);
+    const btnRight = document.getElementById(rightBtnId);
+
+    function updateButtons() {
+        if (!scrollDiv) return;
+        btnLeft.style.display = scrollDiv.scrollLeft > 10 ? 'block' : 'none';
+        btnRight.style.display = (scrollDiv.scrollWidth - scrollDiv.clientWidth - scrollDiv.scrollLeft) > 10 ? 'block' : 'none';
+    }
+
+    function scrollToCard(direction) {
+        const cards = scrollDiv.querySelectorAll('.product-card');
+        if (!cards.length) return;
+
+        // Encuentra la card más cercana al centro del scroll actual
+        const scrollCenter = scrollDiv.scrollLeft + scrollDiv.offsetWidth / 2;
+        let closestIndex = 0;
+        let minDistance = Infinity;
+        cards.forEach((card, i) => {
+            const cardCenter = card.offsetLeft + card.offsetWidth / 2;
+            const distance = Math.abs(cardCenter - scrollCenter);
+            if (distance < minDistance) {
+                minDistance = distance;
+                closestIndex = i;
+            }
+        });
+
+        // Calcula el nuevo índice
+        let newIndex = direction === 'right' ? closestIndex + 1 : closestIndex - 1;
+        newIndex = Math.max(0, Math.min(cards.length - 1, newIndex));
+        const targetCard = cards[newIndex];
+        if (targetCard) {
+            const cardLeft = targetCard.offsetLeft;
+            const scrollTo = cardLeft - (scrollDiv.offsetWidth / 2) + (targetCard.offsetWidth / 2);
+            scrollDiv.scrollTo({ left: scrollTo, behavior: 'smooth' });
+        }
+    }
+
+    // Elimina listeners previos para evitar duplicados
+    btnLeft.onclick = null;
+    btnRight.onclick = null;
+    scrollDiv.removeEventListener('scroll', updateButtons);
+    window.removeEventListener('resize', updateButtons);
+
+    if (scrollDiv && btnLeft && btnRight) {
+        btnLeft.onclick = () => scrollToCard('left');
+        btnRight.onclick = () => scrollToCard('right');
+        scrollDiv.addEventListener('scroll', updateButtons);
+        window.addEventListener('resize', updateButtons);
+        setTimeout(updateButtons, 500);
+    }
+}
 
 // Agregar algunas características interactivas
 document.addEventListener('DOMContentLoaded', function () {
@@ -464,3 +624,41 @@ fetch('src/componentes/ModalProducts.html')
     .then(html => {
         document.body.insertAdjacentHTML('beforeend', html);
     });
+
+function abrirModalProducto(id, name, description, price, imageUrl) {
+    const modal = document.getElementById('successModal');
+    const modalContent = modal.querySelector('.modal-content');
+    modalContent.innerHTML = `
+        <div class="modal-header flex justify-between items-center px-8 py-4 border-b border-gray-200">
+            <h3 class="text-bakery-text text-xl font-semibold font-playfair">${name}</h3>
+            <button class="modal-close bg-transparent border-none text-bakery-text text-2xl cursor-pointer p-1"
+                onclick="closeModal()">×</button>
+        </div>
+        <div class="modal-body px-8 py-6 flex flex-col items-center">
+            <img src="${imageUrl}" alt="${name}" class="w-40 h-40 object-cover rounded-xl mb-4">
+            <p class="text-bakery-text leading-relaxed mb-2">${description}</p>
+            <span class="text-lg font-semibold text-bakery-brown mb-4">${price}</span>
+            <button class="bg-bakery-brown text-white border-none px-6 py-2 rounded-lg font-medium hover:bg-bakery-text transition-colors duration-300" onclick="addToCart('${name}')">Agregar al carrito</button>
+        </div>
+    `;
+    // Mostrar modal (fondo gris sin transición)
+    modal.classList.remove('hidden');
+    modal.classList.add('flex');
+    // Transición solo para el contenido
+    setTimeout(() => {
+        modalContent.classList.add('opacity-100', 'scale-100');
+        modalContent.classList.remove('opacity-0', 'scale-95');
+    }, 10);
+}
+
+function closeModal() {
+    const modal = document.getElementById('successModal');
+    const modalContent = modal.querySelector('.modal-content');
+    // Transición de salida solo para el contenido
+    modalContent.classList.remove('opacity-100', 'scale-100');
+    modalContent.classList.add('opacity-0', 'scale-95');
+    setTimeout(() => {
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+    }, 300); // Debe coincidir con la duración de la transición
+}

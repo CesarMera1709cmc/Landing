@@ -143,34 +143,67 @@
 
             <!-- Pasteles -->
             <div class="product-category mb-16">
-                <h3
-                    class="category-title text-2xl md:text-3xl font-semibold text-bakery-text font-playfair text-center mb-8">
-                    Pasteles</h3>
-                <div class="product-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="cakes-grid">
-                    <div class="loading text-center py-8 text-bakery-text opacity-60 italic">Cargando pasteles
-                        deliciosos...</div>
+                <h3 class="category-title text-2xl md:text-3xl font-semibold text-bakery-text font-playfair text-center mb-8">
+                    Pasteles
+                </h3>
+                <div class="relative">
+                    <!-- Botón Izquierda -->
+                    <button id="scrollLeftCakes"
+                        class="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-white shadow-custom rounded-full p-2 text-bakery-brown hover:bg-bakery-brown hover:text-white transition-colors duration-300 md:hidden"
+                        style="display: none;">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <!-- Contenedor scroll horizontal -->
+                    <div id="cakes-scroll" class="product-grid flex flex-nowrap overflow-x-auto gap-8 scroll-smooth py-4 px-2 md:justify-center"></div>
+                    <!-- Botón Derecha -->
+                    <button id="scrollRightCakes"
+                        class="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-white shadow-custom rounded-full p-2 text-bakery-brown hover:bg-bakery-brown hover:text-white transition-colors duration-300 md:hidden">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
                 </div>
             </div>
 
-            <!-- Postres -->
+            <!-- Postres (antes Bocados) -->
             <div class="product-category mb-16">
-                <h3
-                    class="category-title text-2xl md:text-3xl font-semibold text-bakery-text font-playfair text-center mb-8">
-                    Postres</h3>
-                <div class="product-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="desserts-grid">
-                    <div class="loading text-center py-8 text-bakery-text opacity-60 italic">Cargando postres dulces...
-                    </div>
+                <h3 class="category-title text-2xl md:text-3xl font-semibold text-bakery-text font-playfair text-center mb-8">
+                    Postres
+                </h3>
+                <div class="relative">
+                    <!-- Botón Izquierda -->
+                    <button id="scrollLeftDesserts"
+                        class="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-white shadow-custom rounded-full p-2 text-bakery-brown hover:bg-bakery-brown hover:text-white transition-colors duration-300"
+                        style="display: none;">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <!-- Contenedor scroll horizontal -->
+                    <div id="desserts-scroll" class="product-grid flex flex-nowrap overflow-x-auto gap-8 scroll-smooth py-4 px-2"></div>
+                    <!-- Botón Derecha -->
+                    <button id="scrollRightDesserts"
+                        class="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-white shadow-custom rounded-full p-2 text-bakery-brown hover:bg-bakery-brown hover:text-white transition-colors duration-300">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
                 </div>
             </div>
 
-            <!-- Bocados -->
+            <!-- Bocados de Sal -->
             <div class="product-category mb-16">
-                <h3
-                    class="category-title text-2xl md:text-3xl font-semibold text-bakery-text font-playfair text-center mb-8">
-                    Bocados</h3>
-                <div class="product-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="bites-grid">
-                    <div class="loading text-center py-8 text-bakery-text opacity-60 italic">Cargando bocados
-                        sabrosos...</div>
+                <h3 class="category-title text-2xl md:text-3xl font-semibold text-bakery-text font-playfair text-center mb-8">
+                    Bocados de sal
+                </h3>
+                <div class="relative">
+                    <!-- Botón Izquierda -->
+                    <button id="scrollLeftBites"
+                        class="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-white shadow-custom rounded-full p-2 text-bakery-brown hover:bg-bakery-brown hover:text-white transition-colors duration-300"
+                        style="display: none;">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <!-- Contenedor scroll horizontal -->
+                    <div id="bites-scroll" class="product-grid flex flex-nowrap overflow-x-auto gap-8 scroll-smooth py-4 px-2"></div>
+                    <!-- Botón Derecha -->
+                    <button id="scrollRightBites"
+                        class="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-white shadow-custom rounded-full p-2 text-bakery-brown hover:bg-bakery-brown hover:text-white transition-colors duration-300">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
                 </div>
             </div>
         </div>
@@ -185,7 +218,8 @@
                 <p class="section-description text-lg text-bakery-text opacity-70 max-w-xl mx-auto">Historias reales de
                     nuestros clientes felices</p>
             </div>
-            <div class="reviews-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="reviews-grid">
+            <div id="reviews-grid"
+                class="flex flex-nowrap overflow-x-auto gap-8 scroll-smooth py-4 px-2 md:grid md:grid-cols-3 md:gap-8 md:overflow-x-visible">
                 <div class="loading text-center py-8 text-bakery-text opacity-60 italic">Cargando comentarios de
                     clientes...</div>
             </div>
@@ -285,10 +319,10 @@
                 <p class="footer-description text-white/80 mb-6 leading-relaxed">Creando dulces recuerdos en cada bocado
                     desde 2015. Nuestra pasión por la repostería alegra tus momentos especiales.</p>
                 <div class="social-links flex justify-center md:justify-start gap-4">
-                    <a href=""
+                    <a href="https://www.facebook.com/profile.php?id=100009369480407"
                         class="social-link text-white/80 text-xl hover:text-bakery-brown transition-colors duration-300"
                         aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                    <a href=""
+                    <a href="https://www.instagram.com/azucal1/"
                         class="social-link text-white/80 text-xl hover:text-bakery-brown transition-colors duration-300"
                         aria-label="Instagram"><i class="fab fa-instagram"></i></a>
 
@@ -367,3 +401,54 @@
 </body>
 
 </html>
+
+<style>
+/* Oculta la barra de scroll horizontal y vertical solo en la sección de bocados de dulce */
+#desserts-scroll {
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE 10+ */
+}
+
+#desserts-scroll::-webkit-scrollbar {
+    display: none; /* Chrome/Safari/Webkit */
+}
+
+/* Transición solo para el contenido del modal */
+#successModal .modal-content {
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    opacity: 0;
+    transform: scale(0.95);
+}
+
+#successModal .modal-content.opacity-100.scale-100 {
+    opacity: 1;
+    transform: scale(1);
+}
+
+#successModal .modal-content.opacity-0.scale-95 {
+    opacity: 0;
+    transform: scale(0.95);
+}
+
+#cakes-scroll,
+#desserts-scroll,
+#bites-scroll {
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE 10+ */
+}
+
+#cakes-scroll::-webkit-scrollbar,
+#desserts-scroll::-webkit-scrollbar,
+#bites-scroll::-webkit-scrollbar {
+    display: none; /* Chrome/Safari/Webkit */
+}
+
+#reviews-grid {
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE 10+ */
+}
+
+#reviews-grid::-webkit-scrollbar {
+    display: none; /* Chrome/Safari/Webkit */
+}
+</style>
